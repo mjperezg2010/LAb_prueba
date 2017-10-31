@@ -73,8 +73,6 @@ public class LAbsimulacionelfos {
         int opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Menu\n"
                 + "1. Bestia\n"
                 + "2. Integrantes\n"
-                + "3. Pueblo\n"
-                + "4. Lugar\n"
                 + "Mensaje", JOptionPane.DEFAULT_OPTION));
 
         return opcion;
@@ -101,8 +99,11 @@ public class LAbsimulacionelfos {
                 break;
             default:
                 break;
+                
+                
 
         }//Fin switch magistral
+        JOptionPane.showMessageDialog(null, "Usted con agregado con exito");
 
     }//Fin metodo agregar waragria
 
@@ -183,12 +184,12 @@ public class LAbsimulacionelfos {
         temp.setAltura(JOptionPane.showInputDialog(null, "Ingrese su altura"));
         temp.setFecha(JOptionPane.showInputDialog(null, "Ingrese su fecha de nacimiento"));
         int cont = 0;
-        String s="";
+        String s = "";
         for (Bestia beast : listbestias) {
-            s+= cont + " - " + beast+"\n";
+            s += cont + " - " + beast + "\n";
             cont++;
         }
-        temp.setBeast(listbestias.get(Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el numero de bestia a agregar"+s))));
+        temp.setBeast(listbestias.get(Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el numero de bestia a agregar\n" + s))));
         JOptionPane.showMessageDialog(null, "Ha agregado un integrante");
         String decision = JOptionPane.showInputDialog(null, "(1) Pueblos\n(2) Lugares\n Ingrese donde quiere agregar su integrante");
         if (decision.equals("1")) {
@@ -256,4 +257,4 @@ static Elfos elfo = new Elfos();
     static Hombres hombre = new Hombres();
     static Maiar maiar = new Maiar();
 
-*/
+ */
