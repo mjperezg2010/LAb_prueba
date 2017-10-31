@@ -1,13 +1,13 @@
 
 package labsimulacionelfos;
 
+
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author mjper
- */
+
+
 public class LAbsimulacionelfos {
+
 
     /**
      * @param args the command line arguments
@@ -43,6 +43,7 @@ public class LAbsimulacionelfos {
        
         
         
+
     }
     
     public static int menu(){
@@ -50,11 +51,97 @@ public class LAbsimulacionelfos {
                 + "1. Agregar\n"
                 + "2. Modificar\n"
                 + "3. Eliminar\n"
-                + "4 Listar\n"
+                + "4. Listar\n"
                 + "5. Simulacion\n","Mensaje",JOptionPane.DEFAULT_OPTION));
         
         return opcion;
         
     }//Fin del metp
     
+    
+    public static int menuObjetos(){
+        int opcion=Integer.parseInt(JOptionPane.showInputDialog(null, "Menu\n"
+                + "1. Bestia\n"
+                + "2. Integrantes\n"
+                + "3. Pueblo\n"
+                + "4. Lugar\n"
+                + "5. Simulacion\n","Mensaje",JOptionPane.DEFAULT_OPTION));
+        
+        return opcion;
+        
+    }
+    
 }//Fin de la clase
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
