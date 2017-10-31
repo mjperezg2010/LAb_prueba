@@ -22,6 +22,7 @@ public class LAbsimulacionelfos {
                     break;
 
             }//Fin switch de la puta madre
+            res=JOptionPane.showConfirmDialog(null, "¿Desea salir?","Confirmacion",JOptionPane.YES_NO_OPTION);
 
         } while (res == 1);//While de la ostia
 
@@ -85,11 +86,11 @@ public class LAbsimulacionelfos {
         return op;
     }
 
-    public static void addBestias(int o) {
+    public static void addBestias(int opcion) {
         int garras=Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el numero de garras (maximo 6)","Garras",JOptionPane.DEFAULT_OPTION));
         boolean veneno;
         
-        switch (o) {
+        switch (opcion) {
             case 1:
                 
                 
