@@ -9,9 +9,7 @@ import javax.swing.JOptionPane;
 public class LAbsimulacionelfos {
 
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
         int res=0;
         do{
