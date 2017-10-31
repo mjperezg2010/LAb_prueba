@@ -1,22 +1,26 @@
 package labsimulacionelfos;
 
+import Bestia.Aguilas;
+import Bestia.Arañas;
+import Bestia.Balrogs;
 import Bestia.Bestia;
+import Bestia.BestiasAladas;
+import Bestia.Dragones;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import java.util.ArrayList;
 import Otros.*;
 public class LAbsimulacionelfos {
     
-<<<<<<< HEAD
+
     static ArrayList<Integrante> listaIntengrantes = new ArrayList();
     
-=======
+
     static ArrayList <Bestia> listbestias= new ArrayList();
 
     /**
      * @param args the command line arguments
      */
->>>>>>> 3ee9cae50ea2243440a83d2e78eca16e27e708ad
     public static void main(String[] args) {
         int res = 0;
         JOptionPane.showMessageDialog(null, "Bienvenido al pueblo pelapijas y simulacion gay");
@@ -76,6 +80,8 @@ public class LAbsimulacionelfos {
 
                 break;
             case 2:
+                agregarIntegrantes();
+                
                 break;
             case 3:
                 break;
@@ -100,6 +106,7 @@ public class LAbsimulacionelfos {
     }
 
     public static void addBestias(int opcion) {
+        
         int garras=Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el numero de garras (maximo 6)","Garras",JOptionPane.DEFAULT_OPTION));
         
         boolean veneno;
@@ -115,18 +122,45 @@ public class LAbsimulacionelfos {
         switch (opcion) {
             case 1:
                 String color=JOptionPane.showInputDialog(null, "Ingrese el color del plumaje", "Plumaje",JOptionPane.DEFAULT_OPTION);  
+                //String colorplumaje, int garras, boolean veneno
+                listbestias.add(new Aguilas(color,garras,veneno));
                 
                 
                 break;
             case 2:
+                String sexo=JOptionPane.showInputDialog(null, "Ingrese el sexo de la bestia","Sexo",JOptionPane.DEFAULT_OPTION);
+                //String sexo, int garras, boolean veneno
+                listbestias.add(new Arañas(sexo,garras,veneno));
+                
+                
                 break;
             case 3:
+                boolean latigo;
+                int lat=JOptionPane.showConfirmDialog(null, "¿ Desea que los balrogs lleven latigo?","Latigo",JOptionPane.YES_NO_OPTION);
+               if (lat==0){
+                 latigo=true;
+               }
+             else{
+                latigo=false;
+              }
+               //boolean latigo, int garras, boolean veneno
+               listbestias.add(new Balrogs(latigo,garras,veneno));
+                
                 break;
             case 4:
+                String velocidad=JOptionPane.showInputDialog(null, "Ingrese la velocidad","Velocidad",JOptionPane.DEFAULT_OPTION);
+                //String velocidad, int garras, boolean veneno
+                listbestias.add(new BestiasAladas(velocidad,garras,veneno));
+                
                 break;
             case 5:
+                String longi=JOptionPane.showInputDialog(null, "Ingrese la longitud de ala","Longitud de Ala",JOptionPane.DEFAULT_OPTION);
+                //int longitudala, int garras, boolean veneno
+                
+                listbestias.add(new Dragones(longi,garras,veneno));
                 break;
             default:
+                JOptionPane.showMessageDialog(null, "Opcion Invalida","Advertencia",JOptionPane.WARNING_MESSAGE);
                 break;
 
         }//Fin switch ostion
@@ -168,7 +202,7 @@ public class LAbsimulacionelfos {
     
     
     
-    public void agregarIntegrantes(){
+    public static void agregarIntegrantes(){
         Integrante temp  = new Integrante();
         JOptionPane.showMessageDialog(null,"*Agregar integrantes*");                
         temp.setNombre(JOptionPane.showInputDialog(null,"Ingrese su nombre"));

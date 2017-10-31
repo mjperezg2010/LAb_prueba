@@ -10,22 +10,22 @@ package Bestia;
  * @author mjper
  */
 public class Dragones extends Bestia{
-    private int longitudala;
+    private String longitudala;
 
     public Dragones() {
         super();
     }
 
-    public Dragones(int longitudala, int garras, boolean veneno) {
+    public Dragones(String longitudala, int garras, boolean veneno) {
         super(garras, veneno);
         this.longitudala = longitudala;
     }
 
-    public int getLongitudala() {
+    public String getLongitudala() {
         return longitudala;
     }
 
-    public void setLongitudala(int longitudala) {
+    public void setLongitudala(String longitudala) {
         this.longitudala = longitudala;
     }
 
