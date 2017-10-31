@@ -10,6 +10,7 @@ public class LAbsimulacionelfos {
         do {
             switch (menuprincipal()) {
                 case 1:
+                    Agregar();
                     break;
                 case 2:
                     break;
