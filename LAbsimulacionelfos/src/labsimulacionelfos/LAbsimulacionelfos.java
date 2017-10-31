@@ -1,12 +1,22 @@
 package labsimulacionelfos;
 
+import Bestia.Bestia;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import java.util.ArrayList;
 import Otros.*;
 public class LAbsimulacionelfos {
     
+<<<<<<< HEAD
     static ArrayList<Integrante> listaIntengrantes = new ArrayList();
     
+=======
+    static ArrayList <Bestia> listbestias= new ArrayList();
+
+    /**
+     * @param args the command line arguments
+     */
+>>>>>>> 3ee9cae50ea2243440a83d2e78eca16e27e708ad
     public static void main(String[] args) {
         int res = 0;
         JOptionPane.showMessageDialog(null, "Bienvenido al pueblo pelapijas y simulacion gay");
@@ -91,10 +101,20 @@ public class LAbsimulacionelfos {
 
     public static void addBestias(int opcion) {
         int garras=Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el numero de garras (maximo 6)","Garras",JOptionPane.DEFAULT_OPTION));
+        
         boolean veneno;
+        int ven=JOptionPane.showConfirmDialog(null, "¿ Desea que la bestias lleva veneno?","Veneno",JOptionPane.YES_NO_OPTION);
+        if (ven==0){
+            veneno=true;
+        }
+        else{
+            veneno=false;
+        }
+        
         
         switch (opcion) {
             case 1:
+                String color=JOptionPane.showInputDialog(null, "Ingrese el color del plumaje", "Plumaje",JOptionPane.DEFAULT_OPTION);  
                 
                 
                 break;
