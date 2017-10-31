@@ -13,6 +13,27 @@ public class LAbsimulacionelfos {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        int res=0;
+        do{
+            switch (menu()){
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                
+            }//Fin switch de la puta madre
+            
+            
+            
+            
+        }while(res==1);//While de la ostia
+        
         
         
         
