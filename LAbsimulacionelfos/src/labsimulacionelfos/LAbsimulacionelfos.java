@@ -1,8 +1,12 @@
 package labsimulacionelfos;
 
+import Bestia.Bestia;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class LAbsimulacionelfos {
+    
+    static ArrayList <Bestia> listbestias= new ArrayList();
 
     /**
      * @param args the command line arguments
@@ -91,10 +95,20 @@ public class LAbsimulacionelfos {
 
     public static void addBestias(int opcion) {
         int garras=Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el numero de garras (maximo 6)","Garras",JOptionPane.DEFAULT_OPTION));
+        
         boolean veneno;
+        int ven=JOptionPane.showConfirmDialog(null, "¿ Desea que la bestias lleva veneno?","Veneno",JOptionPane.YES_NO_OPTION);
+        if (ven==0){
+            veneno=true;
+        }
+        else{
+            veneno=false;
+        }
+        
         
         switch (opcion) {
             case 1:
+                String color=JOptionPane.showInputDialog(null, "Ingrese el color del plumaje", "Plumaje",JOptionPane.DEFAULT_OPTION);  
                 
                 
                 break;
