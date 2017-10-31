@@ -1,22 +1,30 @@
 package labsimulacionelfos;
 
 import Bestia.Bestia;
-import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import java.util.ArrayList;
+import Pueblos.*;
 import Otros.*;
 public class LAbsimulacionelfos {
     
-<<<<<<< HEAD
+
     static ArrayList<Integrante> listaIntengrantes = new ArrayList();
+    static Elfos elfo = new Elfos();
+    static Enanos enano = new Enanos();
+    static Hobbits hobbit = new Hobbits();
+    static Hombres hombre = new Hombres();
+    static Maiar maiar = new Maiar();
     
-=======
+    static Comarca comarca = new Comarca();
+    static Gondor gondor = new Gondor();
+    static Mordor mordor = new Mordor();
+
     static ArrayList <Bestia> listbestias= new ArrayList();
 
     /**
      * @param args the command line arguments
      */
->>>>>>> 3ee9cae50ea2243440a83d2e78eca16e27e708ad
+
     public static void main(String[] args) {
         int res = 0;
         JOptionPane.showMessageDialog(null, "Bienvenido al pueblo pelapijas y simulacion gay");
@@ -168,6 +176,33 @@ public class LAbsimulacionelfos {
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     public void agregarIntegrantes(){
         Integrante temp  = new Integrante();
         JOptionPane.showMessageDialog(null,"*Agregar integrantes*");                
@@ -175,11 +210,78 @@ public class LAbsimulacionelfos {
         temp.setApellido(JOptionPane.showInputDialog(null,"Ingrese su Apellido"));
         temp.setAltura(JOptionPane.showInputDialog(null,"Ingrese su altura"));
         temp.setFecha(JOptionPane.showInputDialog(null,"Ingrese su fecha de nacimiento"));
-        
+        int cont = 0;
+        for (Bestia beast : listbestias) {
+            System.out.println(cont + " - " + beast);
+            cont++;
+        }
+        temp.setBeast(listbestias.get(Integer.parseInt(JOptionPane.showInputDialog(null,"Ingrese el numero de bestia a agregar"))));
         JOptionPane.showMessageDialog(null, "Ha agregado un integrante");
+        String decision = JOptionPane.showInputDialog(null,"(1) Pueblos\n(2) Lugares\n Ingrese donde quiere agregar su integrante");
+        if(decision.equals("1")){
+            //AGREGAR EN PUEBLO
+            String op = JOptionPane.showInputDialog(null, "----Pueblos----\n"
+                    + "1. Elfos\n"
+                    + "2. Enanos\n"
+                    + "3. Hobbits\n"
+                    + "4. Hombres\n"
+                    + "5. Maiar\n"
+                    + "Seleccione el pueblo donde desea mandar su integrante"
+                    + "", "Menu de bestias pollonas", JOptionPane.DEFAULT_OPTION);
+            switch(op){
+                case "1":
+                    elfo.getListintegrante().add(temp);
+                    break;
+                case "2":
+                    enano.getListintegrante().add(temp);
+                    break;
+                case "3":
+                    hobbit.getListintegrante().add(temp);
+                    break;
+                case "4":
+                    hombre.getListintegrante().add(temp);
+                    break;
+                case "5":
+                    maiar.getListintegrante().add(temp);
+                    break;
+            }
+        }else{
+            if(decision.equals("2")){
+            //AGREGAR EN LUGAR
+            String op = JOptionPane.showInputDialog(null, "----Pueblos----\n"
+                    + "1. La Comarca\n"
+                    + "2. Gondor\n"
+                    + "3. Mordor\n"
+                    + "Seleccione el lugar donde desea mandar su integrante"
+                    + "", "Menu de bestias pollonas", JOptionPane.DEFAULT_OPTION);
+            switch(op){
+                case "1":
+                    comarca.listaIntegrantes.add(temp);
+                    break;
+                case "2":
+                    gondor.listaIntegrantes.add(temp);
+                    break;
+                case "3":
+                    mordor.listaIntegrantes.add(temp);
+                    break;
+                
+            }
+            
+            }
+            
+        }
+            
+            
+            //AGREGAR EN LUGAR
     }
-    
-    
-    
+        
 }//Fin de la clase
 
+/*
+static Elfos elfo = new Elfos();
+    static Enanos enano = new Enanos();
+    static Hobbits hobbits = new Hobbits();
+    static Hombres hombre = new Hombres();
+    static Maiar maiar = new Maiar();
+
+*/

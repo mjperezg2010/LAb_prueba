@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Lugar {
     
     protected int extensionTerrirotial;
-    protected ArrayList<Integrante> listaIntegrantes = new ArrayList();
+    public ArrayList<Integrante> listaIntegrantes = new ArrayList();
 
     public Lugar() {
     }
