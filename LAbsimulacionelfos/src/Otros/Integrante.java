@@ -23,6 +23,11 @@ public class Integrante {
         this.beast = beast;
     }
 
+    public Integrante() {
+    }
+
+    
+    
     public String getNombre() {
         return Nombre;
     }

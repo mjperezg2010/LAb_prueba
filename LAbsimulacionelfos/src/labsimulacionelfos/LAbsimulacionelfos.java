@@ -1,8 +1,11 @@
 package labsimulacionelfos;
 
 import javax.swing.JOptionPane;
-
+import java.util.ArrayList;
+import Otros.*;
 public class LAbsimulacionelfos {
+    
+    static ArrayList<Integrante> listaIntengrantes = new ArrayList();
     
     public static void main(String[] args) {
         int res = 0;
@@ -109,6 +112,54 @@ public class LAbsimulacionelfos {
         }//Fin switch ostion
 
     }//Fin besrias add
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public void agregarIntegrantes(){
+        Integrante temp  = new Integrante();
+        JOptionPane.showMessageDialog(null,"*Agregar integrantes*");                
+        temp.setNombre(JOptionPane.showInputDialog(null,"Ingrese su nombre"));
+        temp.setApellido(JOptionPane.showInputDialog(null,"Ingrese su Apellido"));
+        temp.setAltura(JOptionPane.showInputDialog(null,"Ingrese su altura"));
+        temp.setFecha(JOptionPane.showInputDialog(null,"Ingrese su fecha de nacimiento"));
+        
+        JOptionPane.showMessageDialog(null, "Ha agregado un integrante");
+    }
+    
+    
+    
 }//Fin de la clase
 
